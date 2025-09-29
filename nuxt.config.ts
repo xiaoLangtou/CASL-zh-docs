@@ -14,6 +14,12 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+  image: {
+    dir: 'public/images' // 可选，指定图片目录
+  },
+  ui:{
+    fonts:false
+  },
 
   content: {
     build: {

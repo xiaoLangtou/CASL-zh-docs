@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Nuxt Docs Template
-  description: Create stunning, fast and SEO-optimized documentation sites with Nuxt UI.
+  title: CASL.js 中文文档
+  description: 同构授权 JavaScript 库，用于限制给定用户可以访问的资源。
 ---
 
 ::u-page-hero{class="dark:bg-gradient-to-b from-neutral-900 to-neutral-950"}
@@ -12,19 +12,19 @@ orientation: horizontal
 :hero-background
 
 #title
-Ship Beautiful [Documentation]{.text-primary}.
+强大的 [授权]{.text-primary} 库
 
 #description
-Build professional documentation with Nuxt UI's powerful components, enhanced typography, and seamless Nuxt Content integration. The same system trusted by the entire [Nuxt ecosystem](https://nuxt.com).
+CASL 是一个同构授权 JavaScript 库，用于限制给定用户可以访问的资源。它被设计为可增量采用，可以轻松扩展到复杂的授权需求。
 
 #links
   :::u-button
   ---
-  to: /getting-started
+  to: /guide/install
   size: xl
   trailing-icon: i-lucide-arrow-right
   ---
-  Get started
+  开始使用
   :::
 
   :::u-button
@@ -33,10 +33,10 @@ Build professional documentation with Nuxt UI's powerful components, enhanced ty
   color: neutral
   variant: outline
   size: xl
-  to: https://github.com/nuxt-ui-templates/docs
+  to: https://github.com/stalniy/casl
   target: _blank
   ---
-  Use this template
+  GitHub 仓库
   :::
 
 #default
@@ -73,7 +73,7 @@ Build professional documentation with Nuxt UI's powerful components, enhanced ty
 
 ::u-page-section{class="dark:bg-neutral-950"}
 #title
-Powered by Nuxt UI components
+CASL 核心特性
 
 #links
   :::u-button
@@ -81,119 +81,45 @@ Powered by Nuxt UI components
   color: neutral
   size: lg
   target: _blank
-  to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
+  to: /guide/intro
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
-  Explore Nuxt UI
+  了解更多
   :::
 
 #features
   :::u-page-feature
   ---
-  icon: i-lucide-palette
+  icon: i-lucide-shield-check
   ---
   #title
-  100+ UI Components
+  同构授权
 
   #description
-  Access the complete Nuxt UI component library. From badges to modals, everything styled and accessible out of the box.
+  在前端和后端使用相同的授权逻辑。一次定义，随处使用，确保客户端和服务器端的一致性。
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-type
+  icon: i-lucide-zap
   ---
   #title
-  Beautiful Typography
+  高性能
 
   #description
-  Pre-styled prose components with perfect visual harmony. No need for @tailwindcss/typography - get precise control over every element.
+  轻量级库，零依赖，优化的算法确保快速的权限检查，不会影响应用程序性能。
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-layers
+  icon: i-lucide-puzzle
   ---
   #title
-  Rich Prose Components
+  灵活可扩展
 
   #description
-  Accordions, cards, callouts, tabs, steps, code blocks, and more - all provided by Nuxt UI for interactive documentation.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-search
-  ---
-  #title
-  Built-in Search
-
-  #description
-  Full-text search with ContentSearch component. No need for Algolia - instant, relevant results with keyboard shortcuts (⌘K).
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-navigation
-  ---
-  #title
-  Smart Navigation
-
-  #description
-  Auto-generated navigation with ContentNavigation and ContentToc components. Sticky table of contents and prev/next links.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-moon
-  ---
-  #title
-  Dark Mode Ready
-
-  #description
-  Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice.
-  :::
-::
-
-::u-page-section{class="dark:bg-neutral-950"}
-#title
-Enhanced with Nuxt Content
-
-#links
-  :::u-button
-  ---
-  color: neutral
-  size: lg
-  target: _blank
-  to: https://content.nuxt.com/docs/getting-started/installation
-  trailingIcon: i-lucide-arrow-right
-  variant: subtle
-  ---
-  Explore Nuxt Content
-  :::
-
-#features
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-markdown
-  ---
-  #title
-  MDC Enhanced Markdown
-
-  #description
-  Write in Markdown while embedding Vue components. Seamlessly integrate interactive elements in your content.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-file-text
-  ---
-  #title
-  File-based Routing
-
-  #description
-  Organize content in folders and files. Your documentation structure automatically becomes your navigation.
+  支持简单的基于角色的访问控制（RBAC）到复杂的基于属性的访问控制（ABAC），满足各种授权需求。
   :::
 
   :::u-page-feature
@@ -201,10 +127,10 @@ Enhanced with Nuxt Content
   icon: i-lucide-code
   ---
   #title
-  Syntax Highlighting
+  TypeScript 支持
 
   #description
-  Beautiful code blocks with language detection, line numbers, and copy buttons. Support for 100+ languages.
+  完整的 TypeScript 类型定义，提供出色的开发体验和编译时类型安全。
   :::
 
   :::u-page-feature
@@ -212,32 +138,106 @@ Enhanced with Nuxt Content
   icon: i-lucide-database
   ---
   #title
-  Content Database
+  数据库集成
 
   #description
-  Query your content with a MongoDB-like API. Filter, sort, and search through your documentation programmatically.
+  轻松与 MongoDB、SQL 数据库集成，将权限规则转换为数据库查询，实现高效的数据过滤。
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-file-code
+  icon: i-lucide-layers-3
   ---
   #title
-  Frontmatter Support
+  框架无关
 
   #description
-  Add metadata to your content files. Define SEO tags, navigation properties, and custom fields.
+  可与任何 JavaScript 框架配合使用：React、Vue、Angular、Node.js 等，提供一致的授权体验。
+  :::
+::
+
+::u-page-section{class="dark:bg-neutral-950"}
+#title
+丰富的使用场景
+
+#links
+  :::u-button
+  ---
+  color: neutral
+  size: lg
+  target: _blank
+  to: /cookbook/roles-with-static-permissions
+  trailingIcon: i-lucide-arrow-right
+  variant: subtle
+  ---
+  查看示例
+  :::
+
+#features
+  :::u-page-feature
+  ---
+  icon: i-lucide-users
+  ---
+  #title
+  用户管理系统
+
+  #description
+  控制用户对个人资料、设置和其他用户数据的访问权限，实现细粒度的用户权限管理。
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-git-branch
+  icon: i-lucide-building
   ---
   #title
-  Version Control
+  企业应用
 
   #description
-  Content lives in your repository. Branch, review, and deploy documentation alongside your code.
+  实现复杂的组织架构权限控制，支持部门、角色、项目等多维度的访问控制需求。
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-file-text
+  ---
+  #title
+  内容管理
+
+  #description
+  控制用户对文章、评论、媒体文件等内容的创建、编辑、删除和查看权限。
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-shopping-cart
+  ---
+  #title
+  电商平台
+
+  #description
+  管理商品、订单、支付等业务对象的访问权限，确保数据安全和业务流程的正确性。
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-server
+  ---
+  #title
+  API 安全
+
+  #description
+  保护 REST API 和 GraphQL 端点，确保只有授权用户才能访问特定的数据和操作。
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-smartphone
+  ---
+  #title
+  移动应用
+
+  #description
+  在移动应用中实现离线权限检查，提供一致的用户体验和安全保障。
   :::
 ::
 
@@ -245,16 +245,16 @@ Enhanced with Nuxt Content
   :::u-page-c-t-a
   ---
   links:
-    - label: Start building
-      to: '/getting-started'
+    - label: 开始使用
+      to: '/guide/install'
       trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/docs'
+    - label: 查看 GitHub
+      to: 'https://github.com/stalniy/casl'
       target: _blank
       variant: subtle
       icon: i-simple-icons-github
-  title: Ready to build an amazing documentation?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+  title: 准备好构建安全的应用了吗？
+  description: 加入数千名开发者的行列，使用 CASL 构建强大的授权系统。立即开始，保护您的应用程序。
   class: dark:bg-neutral-950
   ---
 
